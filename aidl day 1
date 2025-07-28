@@ -1,0 +1,219 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNqtOQkZZ3qJTozU6z+MGP5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kamanesh24/kamanesh.com/blob/main/aidl%20day%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dYP3wD9ZoxmM",
+        "outputId": "1ce7bdbf-7bbb-445c-d2dd-cbbe119fb28b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Room no 5 visited\n",
+            "3\n",
+            "8\n"
+          ]
+        }
+      ],
+      "source": [
+        "nameplate = {\n",
+        "    '5' : ['3', '8'],\n",
+        "    '3' : ['7', '12'],\n",
+        "    '7' : [],\n",
+        "    '12' : ['6', '9'],\n",
+        "    '4' : ['14', '2'],\n",
+        "    '8' : ['1', '4'],\n",
+        "    '1' : [],\n",
+        "}\n",
+        "rNo = '5'\n",
+        "print('Room no',rNo, 'visited')\n",
+        "nextRooms = nameplate[rNo]\n",
+        "print(nextRooms[0])\n",
+        "print(nextRooms[1])\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "rNo = '5'\n",
+        "print('Room NO', rNo,' - visited')\n",
+        "nextRooms = nameplate[rNo]\n",
+        "for room in nextRooms:\n",
+        "  print('Room No', room, '- visited')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CfLSaNbBqAnZ",
+        "outputId": "b5b8d747-a517-47ae-c97a-3a28dd7b4732"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Room NO 5  - visited\n",
+            "Room No 3 - visited\n",
+            "Room No 8 - visited\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "rNo = '5'\n",
+        "print('Room NO', rNo,' - visited')\n",
+        "nextRooms = nameplate[rNo]\n",
+        "for room1 in nextRooms:\n",
+        "  print('Room No', room1, '- visited')\n",
+        "\n",
+        "nextRooms = nameplate[room1]\n",
+        "for room2 in nextRooms:\n",
+        "  print('Room No', room2,'- visited')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j4Qm0f5yqjmX",
+        "outputId": "e2127677-b45e-4fc7-e4b0-6c9d9c925dcc"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Room NO 5  - visited\n",
+            "Room No 3 - visited\n",
+            "Room No 8 - visited\n",
+            "Room No 1 - visited\n",
+            "Room No 4 - visited\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "nameplate = {\n",
+        "    '5' : ['3', '8'],\n",
+        "    '3' : ['7', '12'],\n",
+        "    '7' : [],\n",
+        "    '12' : ['6', '9'],\n",
+        "    '4' : ['14', '2'],\n",
+        "    '8' : ['1', '4'],\n",
+        "    '1' : [],\n",
+        "}\n",
+        "rNo = '5'\n",
+        "print('Room NO', rNo,' - visited')\n",
+        "nextRooms = nameplate[rNo]\n",
+        "for room1 in nextRooms:\n",
+        "  print('Room No', room1, '- visited')\n",
+        "\n",
+        "nextRooms2 = nameplate[room1]\n",
+        "for room2 in nextRooms2:\n",
+        "  print('Room No', room2,'- visited')\n",
+        "\n",
+        "  nextRooms3 = nameplate[room2]\n",
+        "for room3 in nextRooms3:\n",
+        "  print('Room No', room3,'- visited')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8eNCspZ2rttK",
+        "outputId": "7dd5463a-1a67-42ad-a88e-287c2d37ebf1"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Room NO 5  - visited\n",
+            "Room No 3 - visited\n",
+            "Room No 8 - visited\n",
+            "Room No 1 - visited\n",
+            "Room No 4 - visited\n",
+            "Room No 14 - visited\n",
+            "Room No 2 - visited\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add_num(x, y):\n",
+        " return x+y\n",
+        "result = add_num(341,565)\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "X8arTJGdvAzp",
+        "outputId": "e23579c3-64da-42ff-bf9d-531bccfae18d"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "906\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "hMADTZHCwdoE"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
